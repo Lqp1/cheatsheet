@@ -1,0 +1,179 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cheatsheet
+% LaTeX Template
+% Version 1.0 (12/12/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Michael Müller (https://github.com/cmichi/latex-template-collection) with
+% extensive modifications by Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{scrartcl} % 11pt font size
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+\usepackage[margin=0pt, landscape]{geometry} % Page margins and orientation
+
+\usepackage{graphicx} % Required for including images
+
+\usepackage{color} % Required for color customization
+\definecolor{mygray}{gray}{.75} % Custom color
+
+\usepackage{url} % Required for the \url command to easily display URLs
+
+\usepackage[ % This block contains information used to annotate the PDF
+colorlinks=false,
+pdftitle={Personnal Cheatsheet},
+pdfauthor={Lqp1},
+pdfsubject={Compilation of useful shortcuts},
+pdfkeywords={Dev, Vim}
+]{hyperref}
+
+\setlength{\unitlength}{1mm} % Set the length that numerical units are measured in
+\setlength{\parindent}{0pt} % Stop paragraph indentation
+
+\renewcommand{\dots}{\ \dotfill{}\ } % Fills in the right amount of dots
+
+\newcommand{\command}[2]{#1~\dotfill{}~#2\\} % Custom command for adding a shorcut
+
+\newcommand{\sectiontitle}[1]{\paragraph{#1} \ \\} % Custom command for subsection titles
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{picture}(297,210) % Create a container for the page content
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\put(10,200){ % Position on the page to put the title
+\begin{minipage}[t]{210mm} % The size and alignment of the title
+\section*{Compilation of useful shortcuts} % Title
+\end{minipage}
+}
+
+%----------------------------------------------------------------------------------------
+%	FIRST COLUMN SPECIFICATION
+%----------------------------------------------------------------------------------------
+
+\put(10,180){ % Divide the page
+\begin{minipage}[t]{85mm} % Create a box to house text
+
+%----------------------------------------------------------------------------------------
+%	HEADING ONE
+%----------------------------------------------------------------------------------------
+
+\sectiontitle{Vim}
+
+Commands \\
+\command{:ab x y}{Abbreviation for a -> y}
+\command{:una x}{Remove abbreviation}
+\command{:split}{Split screen}
+\command{<CTRL-W> +}{Increase viewport size}
+\command{<CTRL-W> =}{Split viewport size}
+\command{:only}{Just one window}
+\command{:ls}{List buffers}
+\command{:b}{Select buffer}
+\command{:bd}{Remove buffer}
+\command{:noh}{Remove highlight from last search}
+\command{K}{Call man under cursor}
+\command{:g/.../d}{Delete matching lines}
+\command{:v/.../d}{Delete not matching lines}
+\command{:bufdo vimgrepadd \%}{command for all buffers}
+\command{:vimgrep :lvimgrep}{grep in file to :cw or :lw}
+\command{:reg}{List registers}
+\command{"x5yw}{Specify buffer}
+\command{<C-R><C-W>}{Read work in cmd toolbar}
+\command{<C-R><REG>}{Read from buffer; = means calc}
+\command{gf}{go to file under cursor}
+\command{<CTRL> O}{Ex mode for 1 command}
+\command{<C-X><C-L>}{Complete line}
+\command{za}{Fold / unfold}
+\command{M,H,L,zz}{Middle, Top, Bottom, go to center}
+\command{cM, cc}{Change M, or change line}
+\command{ytx, yfx, yFx, yTx}{copy til/to after/before}
+\command{V}{Select lines}
+\command{q, @}{Record / Start macro}
+\command{C-a, C-x}{Inc/Dec int under cursor}
+\command{C-w}{Delete word before}
+\command{:vertical resize -20}{Reduce viewport}
+
+%----------------------------------------------------------------------------------------
+%	HEADING TWO
+%----------------------------------------------------------------------------------------
+
+
+
+\end{minipage} % End the first column of text
+} % End the first division of the page
+
+\put(105,180){ % Divide the page
+\begin{minipage}[t]{25mm} % Create a box to house text
+
+\end{minipage} % End the second column of text
+} % End the second division of the page
+
+%----------------------------------------------------------------------------------------
+%	THIRD COLUMN SPECIFICATION
+%----------------------------------------------------------------------------------------
+
+\put(160,180){ % Divide the page
+\begin{minipage}[t]{120mm} % Create a box to house tex
+
+%----------------------------------------------------------------------------------------
+%	IMPORTANT FILES
+%----------------------------------------------------------------------------------------
+
+
+\sectiontitle{Dev}
+
+\command{dpkg-scanpackages . /dev/null | gzip -9c > Packages.gz}{Local Repo}
+\command{git diff --no-prefix > x.patch}{Create patch from diff}
+\command{git format-patch -1 <SHA>}{Create patch from single commit}
+\command{patch -p0 < x.patch}{Apply patch}
+\command{git apply --stat x.patch}{Apply patch from git}
+
+\sectiontitle{Emacs}
+\command{M-x}{Start command}
+\command{C-x C-f}{Find file}
+\command{C-x C-s}{Save}
+\command{C-x C-c}{Quit}
+\command{C-x 2/3}{Split vert/horiz}
+\command{C-x o}{Change viewport}
+\command{C-x 0}{Close current viewport}
+
+%----------------------------------------------------------------------------------------
+%	FOOTNOTE
+%----------------------------------------------------------------------------------------
+
+\vspace{\baselineskip}
+\linethickness{0.5mm} % Thickness of the footer line
+{\color{mygray}\line(1,0){30}} % Print the line with a custom color
+
+\footnotesize{
+
+}
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % End the third column of text
+} % End the third division of the page
+\end{picture} % End the container for the entire page
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
