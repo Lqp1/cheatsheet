@@ -84,6 +84,7 @@ pdfkeywords={Dev, Vim}
 \command{:split}{Split screen}
 \command{<CTRL-W> +}{Increase viewport size}
 \command{<CTRL-W> =}{Split viewport size}
+\command{:vertical resize -20}{Reduce viewport}
 \command{:only}{Just one window}
 \command{:ls}{List buffers}
 \command{:b}{Select buffer}
@@ -92,10 +93,13 @@ pdfkeywords={Dev, Vim}
 \command{K}{Call man under cursor}
 \command{:g/.../d}{Delete matching lines}
 \command{:v/.../d}{Delete not matching lines}
+\command{c/pattern}{action to next search}
 \command{:bufdo vimgrepadd \%}{command for all buffers}
 \command{:vimgrep :lvimgrep}{grep in file to :cw or :lw}
 \command{:reg}{List registers}
 \command{"x5yw}{Specify buffer}
+\command{mx 'x}{save/go to mark x}
+\command{J}{join lines}
 \command{<C-R><C-W>}{Read work in cmd toolbar}
 \command{<C-R><REG>}{Read from buffer; = means calc}
 \command{gf}{go to file under cursor}
@@ -109,7 +113,8 @@ pdfkeywords={Dev, Vim}
 \command{q, @}{Record / Start macro}
 \command{C-a, C-x}{Inc/Dec int under cursor}
 \command{C-w}{Delete word before}
-\command{:vertical resize -20}{Reduce viewport}
+\command{gi gv}{Reinsert, reselect}
+
 
 %----------------------------------------------------------------------------------------
 %	HEADING TWO
