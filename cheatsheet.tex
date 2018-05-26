@@ -71,7 +71,7 @@ pdfkeywords={Dev, Vim}
 %----------------------------------------------------------------------------------------
 
 \put(10,180){ % Divide the page
-\begin{minipage}[t]{85mm} % Create a box to house text
+\begin{minipage}[t]{80mm} % Create a box to house text
 
 %----------------------------------------------------------------------------------------
 %	HEADING ONE
@@ -82,29 +82,24 @@ pdfkeywords={Dev, Vim}
 \command{:ab x y}{Abbreviation for a -> y}
 \command{:una x}{Remove abbreviation}
 \command{:split}{Split screen}
-\command{<CTRL-W> +}{Increase viewport size}
-\command{<CTRL-W> =}{Split viewport size}
 \command{:vertical resize -20}{Reduce viewport}
 \command{:only}{Just one window}
 \command{:ls}{List buffers}
 \command{:b}{Select buffer}
 \command{:bd}{Remove buffer}
 \command{:noh}{Remove highlight from last search}
-\command{K}{Call man under cursor}
 \command{:g/.../d}{Delete matching lines}
 \command{:v/.../d}{Delete not matching lines}
-\command{c/pattern}{action to next search}
 \command{:bufdo vimgrepadd \%}{command for all buffers}
 \command{:vimgrep :lvimgrep}{grep in file to :cw or :lw}
+\command{:cexpr []}{empty quickfix list}
 \command{:reg}{List registers}
 \command{"x5yw}{Specify buffer}
 \command{mx 'x}{save/go to mark x}
+\command{K}{Call man under cursor}
+\command{c/pattern}{action to next search}
 \command{J}{join lines}
-\command{<C-R><C-W>}{Read work in cmd toolbar}
-\command{<C-R><REG>}{Read from buffer; = means calc}
 \command{gf}{go to file under cursor}
-\command{<CTRL> O}{Ex mode for 1 command}
-\command{<C-X><C-L>}{Complete line}
 \command{za}{Fold / unfold}
 \command{M,H,L,zz}{Middle, Top, Bottom, go to center}
 \command{cM, cc}{Change M, or change line}
@@ -112,7 +107,6 @@ pdfkeywords={Dev, Vim}
 \command{V}{Select lines}
 \command{q, @}{Record / Start macro}
 \command{C-a, C-x}{Inc/Dec int under cursor}
-\command{C-w}{Delete word before}
 \command{gi gv}{Reinsert, reselect}
 
 
@@ -125,9 +119,19 @@ pdfkeywords={Dev, Vim}
 \end{minipage} % End the first column of text
 } % End the first division of the page
 
-\put(105,180){ % Divide the page
-\begin{minipage}[t]{25mm} % Create a box to house text
+\put(95,180){ % Divide the page
+\begin{minipage}[t]{80mm} % Create a box to house text
 
+\sectiontitle{Vim, continued}
+
+\command{<CTRL> O}{Ex mode for 1 command}
+\command{<C-X><C-L>}{Complete line}
+\command{<CTRL-W> +}{Increase viewport size}
+\command{<CTRL-W> =}{Split viewport size}
+\command{<CTRL-K> XX}{Enter digraph}
+\command{<C-R><C-W>}{Read work in cmd toolbar}
+\command{<C-R><REG>}{Read from buffer; = means calc}
+\command{C-w}{Delete word before}
 \end{minipage} % End the second column of text
 } % End the second division of the page
 
@@ -135,8 +139,8 @@ pdfkeywords={Dev, Vim}
 %	THIRD COLUMN SPECIFICATION
 %----------------------------------------------------------------------------------------
 
-\put(160,180){ % Divide the page
-\begin{minipage}[t]{120mm} % Create a box to house tex
+\put(180,180){ % Divide the page
+\begin{minipage}[t]{80mm} % Create a box to house tex
 
 %----------------------------------------------------------------------------------------
 %	IMPORTANT FILES
@@ -158,11 +162,13 @@ pdfkeywords={Dev, Vim}
 \command{C-x C-c}{Quit}
 \command{C-x 2/3}{Split vert/horiz}
 \command{C-x o}{Change viewport}
+\command{C-x b}{List buffers}
 \command{C-x 0}{Close current viewport}
 \command{C-s}{Incremental search}
+\command{C-g}{Cancel current command}
 \command{C-M-s}{Incremental Regexp search}
 \command{M-x shell/dired}{Start shell, start dired}
-\command{C-x C-f /login@host:/file}{Tramp edit remote file}
+\command{C-x C-f /login@host:/file}{Tramp edit remote file, use pipe to chain}
 
 %----------------------------------------------------------------------------------------
 %	FOOTNOTE
