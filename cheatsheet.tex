@@ -79,7 +79,7 @@ pdfkeywords={Dev, Vim}
 
 \sectiontitle{Vim}
 
-\command{:ab x y}{Abbreviation for a -> y}
+\command{:ab x y}{Abbreviation for x -> y}
 \command{:una x}{Remove abbreviation}
 \command{:split}{Split screen}
 \command{:vertical resize -20}{Reduce viewport}
@@ -94,19 +94,17 @@ pdfkeywords={Dev, Vim}
 \command{:vimgrep :lvimgrep}{grep in file to :cw or :lw}
 \command{:cexpr []}{empty quickfix list}
 \command{:reg}{List registers}
-\command{"x5yw}{Specify buffer}
+\command{"x5yw}{Specify register}
 \command{mx 'x}{save/go to mark x}
 \command{K}{Call man under cursor}
 \command{c/pattern}{action to next search}
-\command{J}{join lines}
+\command{\%}{Go to beginning or end of current visual selection}
 \command{gf}{go to file under cursor}
 \command{za}{Fold / unfold}
-\command{M,H,L,zz}{Middle, Top, Bottom, go to center}
+\command{M,H,L,zz}{go to Middle, Top, Bottom of screen, center view}
 \command{cM, cc}{Change M, or change line}
 \command{ytx, yfx, yFx, yTx}{copy til/to after/before}
-\command{V}{Select lines}
 \command{q, @}{Record / Start macro}
-\command{C-a, C-x}{Inc/Dec int under cursor}
 \command{gi gv}{Reinsert, reselect}
 
 
@@ -124,13 +122,15 @@ pdfkeywords={Dev, Vim}
 
 \sectiontitle{Vim, continued}
 
-\command{<CTRL> O}{Ex mode for 1 command}
-\command{<C-X><C-L>}{Complete line}
-\command{<CTRL-W> +}{Increase viewport size}
-\command{<CTRL-W> =}{Split viewport size}
-\command{<CTRL-K> XX}{Enter digraph}
-\command{<C-R><C-W>}{Read work in cmd toolbar}
-\command{<C-R><REG>}{Read from buffer; = means calc}
+\command{C-e,C-y C-d,C-u C-f, C-b}{Move 1 line, 1 half screen, 1 screen}
+\command{C-a, C-x}{Inc/Dec int under cursor}
+\command{C-o}{Ex mode for 1 command}
+\command{C-x C-l}{Complete line}
+\command{C-w +}{Increase viewport size}
+\command{C-w =}{Split viewport size}
+\command{C-k XX}{Enter digraph}
+\command{C-r C-w}{Read work in cmd toolbar}
+\command{C-r REG}{Read from register; = means calc}
 \command{C-w}{Delete word before}
 \end{minipage} % End the second column of text
 } % End the second division of the page
