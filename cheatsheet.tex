@@ -131,6 +131,7 @@ pdfkeywords={Dev, Vim}
 \command{C-r C-w}{Read word in cmd toolbar}
 \command{C-r REG}{Read from register; = means calc}
 \command{C-w}{Delete word before}
+\command{:\%!python -m json.tool}{format vim buffer which is a json}
 \end{minipage} % End the second column of text
 } % End the second division of the page
 
@@ -156,8 +157,9 @@ pdfkeywords={Dev, Vim}
 
 \sectiontitle{Emacs}
 \command{M-x}{Start command}
+\command{C-u M-!}{Insert shell command in buffer}
 \command{C-x C-f}{Find file}
-\command{C-x C-s}{Save}
+\command{C-x s}{Save all}
 \command{C-x C-c}{Quit}
 \command{C-x 2/3}{Split vert/horiz}
 \command{C-x o}{Change viewport}
@@ -166,7 +168,6 @@ pdfkeywords={Dev, Vim}
 \command{C-s}{Incremental search}
 \command{C-g}{Cancel current command}
 \command{C-M-s}{Incremental Regexp search}
-\command{M-x shell/dired}{Start shell, start dired}
 \command{C-x C-f /login@host:/file}{Tramp edit remote file, use pipe to chain}
 
 %----------------------------------------------------------------------------------------
