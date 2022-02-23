@@ -90,7 +90,8 @@ pdfkeywords={Dev, Vim}
 \command{:noh}{Remove highlight from last search}
 \command{:g/.../d}{Delete matching lines}
 \command{:v/.../d}{Delete not matching lines}
-\command{:cexpr []}{empty quickfix list}
+\command{:grep pattern}{grep using external tool}
+\command{:cexpr [], :cw, :cn, :cp, :cfdo}{quickfix list}
 \command{:bufdo vimgrepadd pattern \%}{command for all buffers}
 \command{:reg}{List registers}
 \command{"x5yw}{Specify register}
@@ -100,11 +101,12 @@ pdfkeywords={Dev, Vim}
 \command{\%}{Go to beginning or end of current visual selection}
 \command{gf}{go to file under cursor}
 \command{za}{Fold / unfold}
+\command{gq}{Reformat line to make it below 80c}
 \command{M,H,L,zz}{go to Middle, Top, Bottom of screen, center view}
 \command{cM, cc}{Change M, or change line}
 \command{ytx, yfx, yFx, yTx}{copy til/to after/before}
 \command{q, @}{Record / Start macro}
-\command{gi gv gp g;}{Reinsert, reselect, past and go after, go to last insert}
+\command{gi gv gp g;g,}{Reinsert, reselect, past and go after, go to last insert}
 
 
 %----------------------------------------------------------------------------------------
@@ -123,7 +125,8 @@ pdfkeywords={Dev, Vim}
 
 \command{C-e,C-y C-d,C-u C-f, C-b}{Move 1 line, 1 half screen, 1 screen}
 \command{C-a, C-x}{Inc/Dec int under cursor}
-\command{C-o}{Ex mode for 1 command}
+    \command{C-o}{(from insert, ex mode for 1 command}
+\command{C-o,C-i}{go back and forth in :jumps}
 \command{C-x C-l}{Complete line}
 \command{C-w +}{Increase viewport size}
 \command{C-w =}{Split viewport size}
